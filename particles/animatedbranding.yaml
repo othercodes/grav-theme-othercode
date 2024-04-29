@@ -1,0 +1,43 @@
+name: Animated Branding
+description: Displays the main logo/branding with animations.
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    title:
+      type: input.text
+      label: Title
+      description: Main title.
+
+    slug:
+      type: input.text
+      label: Slug
+      description: Slug for the title.
+
+    text:
+      type: textarea.textarea
+      label: Text
+      description: Some text.
+
+    scroll.to:
+      type: input.text
+      label: Scroll to
+      description: Scroll to this DOM element.
+      default: '#wheel'
+
+    filter.enable:
+      type: input.checkbox
+      label: Accent Filter
+      description: Enable the accent filter.
+      default: false
+
+    class:
+      type: input.text
+      label: Class
+      description: CSS class name for the particle.

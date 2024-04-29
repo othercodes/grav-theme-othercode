@@ -1,0 +1,10 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="g-heading {{ particle.class|e }}">
+        <{{ particle.heading}} class="g-title">{{ particle.title|raw }}</{{ particle.heading }}>
+    {% if particle.text %}
+        <small>{{ particle.subtitle|raw }}</small>
+    {% endif %}
+    </div>
+{% endblock %}

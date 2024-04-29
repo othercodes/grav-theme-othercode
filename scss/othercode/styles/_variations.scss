@@ -1,0 +1,705 @@
+// Flush
+.flush,
+.g-flushed {
+  > .g-container,
+  > .g-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.g-container-flushed {
+  margin: -4rem 0;
+}
+
+// no(margin/padding)(left/right/top/bottom)
+// (margin/padding)(2x/3x)
+$css_properties: "margin", "padding";
+$css_directions: "left", "right", "top", "bottom", "all";
+$css_multipliers: 2, 3;
+@each $prop in $css_properties {
+  @each $dir in $css_directions {
+    .no#{$prop}#{$dir} {
+      &, > .g-content {
+        @if ($dir != "all") {
+          #{$prop}-#{$dir}: 0;
+        } @else {
+          #{$prop}: 0;
+        }
+      }
+    }
+  }
+  @each $multi in $css_multipliers {
+    .#{$prop}#{$multi}x {
+      > .g-content {
+        @if ($prop == "padding") {
+          #{$prop}: $content-padding * $multi;
+        } @else if ($prop == "margin") {
+          #{$prop}: $content-margin * $multi;
+        }
+      }
+    }
+  }
+}
+
+// Centered Title
+.title-center {
+  .g-title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+
+  small {
+    text-align: center;
+  }
+}
+
+// General
+.title1, .title2, .title3, .title-gradient, .title-outline {
+  .g-title {
+    margin: -($content-padding) -($content-padding) 1.3rem -($content-padding);
+    padding: 0 1rem;
+  }
+}
+
+.lowecamelcase {
+
+  h1 {
+    text-transform: lowercase;
+    > span {
+      text-transform: capitalize;
+    }
+  }
+
+  h2 {
+    text-transform: lowercase;
+    > span {
+      text-transform: capitalize;
+    }
+  }
+
+}
+
+.title-comment {
+  h1, h2 {
+    &::before {
+      content: '// ';
+    }
+  }
+}
+
+.platform-content .widget {
+  margin: ($content-margin) 0;
+  padding: ($content-padding) 0;
+
+  .widget {
+    margin: 0;
+    padding: 0
+  }
+
+  &:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.widget {
+  &[class*="box"] {
+    padding: $content-padding;
+    margin: $content-margin;
+  }
+
+  &[class*="title"] {
+    .g-title {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+// extra moduletable + nomargin/nopadding
+.nomarginall {
+  div[class*="box"] {
+    margin: 0;
+  }
+}
+
+.nopaddingall {
+  div[class*="box"] {
+    padding: 0;
+  }
+}
+
+// Title 1
+.title1 {
+  .g-title {
+    background: $box1-background;
+    color: $white;
+  }
+}
+
+// Box 1
+.box1 {
+  &.widget,
+  &.g-outer-box,
+  > .g-content {
+    background: darken($box1-background, 8%);
+  }
+
+  &.widget,
+  > .g-content {
+    color: $white;
+  }
+
+  .nav.menu,
+  .mostread,
+  .latestnews,
+  .archive-module,
+  .relateditems,
+  .categories-module,
+  .category-module,
+  .latestusers,
+  .tagspopular ul,
+  .unstyled {
+    li {
+      &::before {
+        color: lighten($box1-background, 30%);
+      }
+    }
+  }
+
+  .button {
+    color: $white;
+
+    &:hover {
+      background: darken($box1-background, 15%);
+    }
+  }
+
+  a {
+    color: lighten($box1-background, 30%);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Box 1, Title 1
+.box1.title1 {
+  .g-title {
+    background: darken($box1-background, 15%);
+  }
+}
+
+// Title 2
+.title2 {
+  .g-title {
+    background: $box2-background;
+    color: $white;
+  }
+}
+
+// Box 2
+.box2 {
+  &.widget,
+  &.g-outer-box,
+  > .g-content {
+    background: $box2-background;
+  }
+
+  &.widget,
+  > .g-content {
+    color: $white;
+  }
+
+  .nav.menu,
+  .mostread,
+  .latestnews,
+  .archive-module,
+  .relateditems,
+  .categories-module,
+  .category-module,
+  .latestusers,
+  .tagspopular ul,
+  .unstyled {
+    li {
+      &::before {
+        color: lighten($box2-background, 30%);
+      }
+    }
+  }
+
+  .button {
+    color: $white;
+    background: darken($box2-background, 10%);
+
+    &:hover {
+      background: darken($box2-background, 15%);
+    }
+  }
+
+  a {
+    color: darken($box2-background, 30%);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Box 2, Title 2
+.box2.title2 {
+  .g-title {
+    background: darken($box2-background, 10%);
+  }
+}
+
+// Title 3
+.title3 {
+  .g-title {
+    background: $box3-background;
+    color: $white;
+  }
+}
+
+// Box 3
+.box3 {
+  &.widget,
+  &.g-outer-box,
+  > .g-content {
+    background: $box3-background;
+  }
+
+  &.widget,
+  > .g-content {
+    color: $white;
+  }
+
+  .nav.menu,
+  .mostread,
+  .latestnews,
+  .archive-module,
+  .relateditems,
+  .categories-module,
+  .category-module,
+  .latestusers,
+  .tagspopular ul,
+  .unstyled {
+    li {
+      &::before {
+        color: lighten($box3-background, 30%);
+      }
+    }
+  }
+
+  .button {
+    color: $white;
+
+    &:hover {
+      background: darken($box3-background, 15%);
+    }
+  }
+
+  a {
+    color: lighten($box3-background, 30%);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Box 3, Title 3
+.box3.title3 {
+  .g-title {
+    background: darken($box3-background, 15%);
+  }
+}
+
+// Title Gradient
+.title-gradient {
+  .g-title {
+    @include linear-gradient(90deg, $accent-color-1, $accent-color-2);
+    color: $white;
+  }
+}
+
+// Box Gradient
+.box-gradient {
+  &.widget,
+  &.g-outer-box,
+  > .g-content {
+    @include linear-gradient(45deg, $accent-color-1, $accent-color-2);
+  }
+
+  &.widget,
+  > .g-content {
+    color: $white;
+  }
+
+  .button {
+    color: $white;
+    background: darken($accent-color-1, 5%);
+
+    &:hover {
+      background: darken($accent-color-1, 15%);
+    }
+  }
+
+  a {
+    color: lighten($accent-color-1, 30%);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Box Gradient, Title Gradient
+.box-gradient.title-gradient {
+  .g-title {
+    @include linear-gradient(10deg, $accent-color-1, $accent-color-2);
+  }
+}
+
+// Title Outline
+.title-outline {
+  .g-title {
+    border: 1px solid $accent-color-1;
+  }
+}
+
+// Box Outline
+.box-outline {
+  &.widget,
+  &.g-outer-box,
+  > .g-content {
+    border: 1px solid $accent-color-1;
+  }
+}
+
+// Box Outline, Title Outline
+.box-outline.title-outline {
+  .g-title {
+    border: none;
+    border-bottom: 1px solid $accent-color-1;
+  }
+}
+
+// Spaced
+.spaced {
+  .g-content {
+    margin: 1px;
+  }
+}
+
+// Shadow
+.shadow {
+  .g-content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Disabled
+.disabled {
+  .g-content {
+    opacity: 0.4;
+  }
+}
+
+// Rounded
+.rounded {
+  .g-content {
+    border-radius: $core-border-radius;
+    overflow: hidden;
+  }
+}
+
+// Equal Height
+.equal-height {
+  #g-aside,
+  #g-mainbar,
+  #g-sidebar {
+    width: 100%;
+  }
+
+  .g-content {
+    width: auto;
+  }
+}
+
+.quote-mode {
+
+  .quote-title {
+    font-size: 200%;
+    padding: 0 5%;
+    margin-top: 75px;
+    line-height: 50px;
+  }
+
+  .quote-author {
+    font-size: 1.2em;
+    line-height: 1.75em;
+    margin: 25px 0;
+  }
+
+}
+
+.parent-category-name:before,
+.category-name:before,
+.create:before,
+.modified:before,
+.published:before,
+.createdby:before,
+.hits:before {
+  font-family: FontAwesome;
+  margin-right: 2px;
+  text-shadow: none;
+}
+
+.published:before {
+  content: "\f073";
+}
+
+.modified:before {
+  content: "\f073";
+}
+
+.create:before {
+  content: "\f073";
+}
+
+.createdby:before {
+  content: "\f040";
+}
+
+.category-name:before {
+  content: "\f07b";
+}
+
+.title-tag {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: none;
+  opacity: 0.5;
+}
+
+.title-large .g-title {
+  font-size: 2rem;
+  line-height: 39px;
+  text-transform: none;
+}
+
+div.nocontent {
+  display: none;
+}
+
+.about-extra-icon ul {
+  padding: 0;
+  margin-left: 0;
+
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 36px 10px 0;
+    width: 134px;
+    height: 134px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+
+    &:hover p i, &:hover p span {
+      color: $accent-color-1;
+    }
+
+    p {
+      color: #7e868e;
+      font-size: 16px;
+      text-align: center;
+      padding-top: 35px;
+      font-weight: 500;
+
+      i {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.about-extra-icon-style2 ul {
+  padding: 0;
+  margin-left: 0;
+
+  li {
+    background-color: #f1f1f1;
+    display: inline-block;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 90px;
+
+    &:hover p i, &:hover p span {
+      color: $accent-color-1;
+    }
+
+    p {
+      color: #7e868e;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px;
+      text-align: center;
+      margin: 0;
+
+      i {
+        font-size: 30px;
+      }
+
+    }
+  }
+}
+
+.white {
+  color: $white;
+}
+
+.black {
+  color: $black;
+}
+
+.silver {
+  color: #bdc3c7;
+}
+
+.flat-blue {
+  color: #2980b9;
+}
+
+.flat-blue2 {
+  color: #3498db;
+}
+
+.flat-green {
+  color: #27ae60;
+}
+
+.flat-green2 {
+  color: #16a085;
+}
+
+.flat-red {
+  color: #c0392b;
+}
+
+.flat-red2 {
+  color: #e74c3c;
+}
+
+.flat-yellow {
+  color: #f1c40f;
+}
+
+.flat-purple {
+  color: #8e44ad;
+}
+
+.flat-orange {
+  color: #e67e22;
+}
+
+.flat-orange2 {
+  color: #f39c12;
+}
+
+.laravel {
+  color: #f4645f;
+}
+
+.flat-bg {
+  .black {
+    color: #fff;
+    background: #000;
+  }
+  .flat-blue {
+    color: #fff;
+    background: #2980b9;
+  }
+  .flat-blue2 {
+    color: #fff;
+    background: #3498db;
+  }
+  .flat-green {
+    color: #fff;
+    background: #27ae60;
+  }
+  .flat-green2 {
+    color: #fff;
+    background: #16a085;
+  }
+  .flat-red {
+    color: #fff;
+    background: #c0392b;
+  }
+  .flat-red2 {
+    color: #fff;
+    background: #e74c3c;
+  }
+  .flat-yellow {
+    color: #fff;
+    background: #f1c40f;
+  }
+  .flat-purple {
+    color: #fff;
+    background: #8e44ad;
+  }
+  .flat-orange {
+    color: #fff;
+    background: #e67e22;
+  }
+  .flat-orange2 {
+    color: #fff;
+    background: #f39c12;
+  }
+  .silver {
+    color: #484848;
+    background: #bdc3c7;
+  }
+  .laravel {
+    color: #fff;
+    background: #f4645f;
+  }
+}
+
+.heading-title {
+  width: 60%;
+  margin: auto !important;
+  .g-title:after {
+    background: $accent-color-1;
+    content: "";
+    display: block;
+    width: 20%;
+    height: 1px;
+    margin: auto;
+  }
+}
+
+.addtoany_container {
+  margin: 0.5rem 0;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

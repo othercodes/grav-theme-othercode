@@ -1,0 +1,11 @@
+enabled: '1'
+date:
+  start: '2017'
+  end: now
+owner: 'otherCode'
+link: ''
+target: _blank
+additional:
+  text: ''
+css:
+  class: ''

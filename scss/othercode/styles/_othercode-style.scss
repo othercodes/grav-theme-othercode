@@ -1,0 +1,178 @@
+.g-home {
+  &.g-othercode-style {
+    h2 {
+      &::before {
+        content: "// ";
+      }
+    }
+
+    // Navigation Section
+    #g-navigation {
+      @include breakpoint(no-mobile) {
+        // Logo Particle
+        .g-logo {
+          color: $white;
+
+          &.g-logo-othercode {
+            svg {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+
+    // Intro Section
+    #g-intro {
+      padding-bottom: 0;
+
+      .g-content {
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        .fp-intro {
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+
+    // Showcase Section
+    #g-showcase {
+      text-align: center;
+      padding: 0;
+
+      // Button Outline
+      .button {
+        &.button-outline {
+          background: transparent;
+          color: $white;
+          border-color: fade-out($white, 0.5);
+
+          &:hover,
+          &:active,
+          &:focus {
+            background: fade-out($white, 0.5);
+            border-color: transparent;
+          }
+        }
+      }
+    }
+
+    // Features
+    .fp-features {
+      .g-block {
+        @include breakpoint(mobile-only) {
+          &:not(:last-child) {
+            margin-bottom: 4.5rem;
+          }
+        }
+
+        .card {
+          .card-block {
+            padding: 0 $content-padding;
+
+            .fa {
+              width: 120px;
+              height: 120px;
+              font-size: 4.125rem;
+              line-height: 6.5rem;
+              margin: 0 auto 20px;
+              border: 8px solid fade-out($base-border-color, 0.6);
+              border-radius: 50%;
+            }
+
+            .card-title {
+              margin-bottom: 5px;
+              font-size: 2.25rem;
+              line-height: 1.66rem;
+              font-weight: $font-weight-semibold;
+            }
+
+            .card-subtitle {
+              display: block;
+              color: fade-out($base-text-color, 0.5);
+              margin-bottom: 1.5rem;
+              font-weight: $font-weight-light;
+
+              &:after {
+                display: block;
+                width: 80%;
+                height: 1px;
+                margin: 30px auto 0;
+                content: "";
+                background-color: fade-out($base-border-color, 0.2);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Testimonials
+    .fp-testimonials {
+      blockquote {
+        margin: 2.5rem 0;
+        border-left: none;
+
+        p {
+          color: $features-text-color;
+        }
+
+        footer {
+          &:after {
+            display: block;
+            margin: 0 auto;
+            width: 2.5rem;
+            height: 1px;
+            content: "";
+            background-color: fade-out($white, 0.75);
+          }
+        }
+      }
+
+      img {
+        margin-bottom: $content-margin * 2;
+        border: 4px solid $white;
+      }
+    }
+
+    // Multi Column Text
+    .fp-multi-column-text {
+      .g-block {
+        p {
+          padding: 0 5rem;
+          border-left: 1px solid $base-border-color;
+
+          @include breakpoint(mobile-only) {
+            border: none;
+          }
+        }
+
+        &:first-child {
+          p {
+            padding-left: 0;
+            padding-right: 5rem;
+            border-left: none;
+
+            @include breakpoint(mobile-only) {
+              padding: 0;
+            }
+          }
+        }
+
+        &:last-child {
+          p {
+            padding-right: 0;
+            padding-left: 5rem;
+
+            @include breakpoint(mobile-only) {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

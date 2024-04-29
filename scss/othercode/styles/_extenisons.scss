@@ -1,0 +1,25 @@
+// Simple Contact Form
+#oc-simplecontactform {
+  #comment {
+    min-height: 163px;
+  }
+
+  .g-recaptcha div {
+    margin: auto;
+  }
+
+  #captcha-lbl {
+    display: none;
+  }
+}
+
+// custom google maps module
+.gmaps {
+  line-height: 0;
+}
+
+pre[class*="language-"] {
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}

@@ -1,0 +1,82 @@
+name: Terminal
+description: Displays a configurable and interactive CSS3 console-based.
+type: particle
+icon: fa-terminal
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    background.color:
+      type: input.colorpicker
+      label: Background
+      default: "#000000"
+
+    font.color:
+      type: input.colorpicker
+      label: Font Color
+      default: "#ffffff"
+
+    terminal.title:
+      type: input.text
+      label: Title
+      description: Enter the Terminal title
+
+    terminal.hostname:
+      type: input.text
+      label: Hostname
+      description: Enter the Terminal hostname
+      default: 'atari800'
+
+    terminal.user:
+      type: input.text
+      label: Username
+      description: Enter the Terminal username
+      default: 'wobinett'
+
+    terminal.height:
+      type: input.text
+      label: Height
+      description: Minimal Terminal height, default 500px.
+      default: '500px'
+
+    toolbal.functionality:
+      type: input.checkbox
+      label: Enabled
+      description: Enable or disable the toolbar functionality.
+      default: true
+
+    items:
+      type: collection.list
+      array: true
+      label: Command items
+      description: Create each command simulation to display
+      value: name
+      ajax: true
+
+      fields:
+        .name:
+          type: input.text
+          label: Command name
+          description: Enter the command friendly name
+
+        .command:
+          type: input.text
+          label: command
+          description: Enter the command line name (no spaces allowed)
+
+        .description:
+          type: textarea.textarea
+          label: Description
+          description: Command description
+          placeholder: Enter command description
+
+        .output:
+          type: textarea.textarea
+          label: Output
+          description: Command Output
+          placeholder: Enter command output

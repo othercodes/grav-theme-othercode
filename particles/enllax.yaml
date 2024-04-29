@@ -1,0 +1,52 @@
+name: Enllax JS
+description: Configure WOW.js and Animate.css
+type: atom
+icon: fa-file
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable analytic particles.
+      default: true
+
+    ratio:
+      type: input.number
+      description: Multiplier for scrolling speed. Less is slower. (Default value is 0).
+      label: Ratio
+      default: 0
+
+    type:
+      type: select.select
+      label: Type
+      description: Type can be defined as it is background parallax scrolling element or foreground scrolling element.
+      default: background
+      options:
+        background: Background
+        foreground: Foreground
+
+    direction:
+      type: select.select
+      label: Direction
+      description: Parallax effect can now be applied in both vertical and horizontal directions.
+      default: vertical
+      options:
+        vertical: Vertical
+        horizontal: Horizontal
+
+    mobile:
+      type: input.checkbox
+      description: Trigger effect on mobile devices (default is true).
+      label: Trigger on mobile
+      default: false
+
+    _instructions:
+      type: separator.note
+      class: alert alert-info
+      content: Basic usage <pre>&lt;div data-enllax-ratio=".5" data-enllax-direction="horizontal">...&lt;/div></pre>
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: 'For more information on how to use this atom, see <a href="https://github.com/mmkjony/enllax.js">Enllax page <i class="fa fa-external-link" aria-hidden="true"></i></a>.'

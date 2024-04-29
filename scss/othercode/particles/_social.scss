@@ -1,0 +1,13 @@
+.g-social {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $base-background;
+    }
+
+    @include breakpoint(tablet-range) {
+      padding: 0.1875rem 0.25rem;
+    }
+  }
+}

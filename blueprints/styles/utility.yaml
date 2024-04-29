@@ -1,0 +1,46 @@
+name: Utility Styles
+description: Utility section styles for the otherCode theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#444444"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"
+    background-image:
+      type: input.imagepicker
+      label: Background Image
+      default: 'gantry-media://utility/utility-001.jpg'
+    background-overlay:
+      type: select.select
+      label: Background Overlay
+      description: 'Enables the overlay made of background color.'
+      placeholder: 'Select...'
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+    background-parallax:
+      type: select.select
+      label: Parallax Effect
+      description: 'Enables the CSS based parallax effect.'
+      placeholder: 'Select...'
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+    padding:
+      type: select.select
+      label: Padding
+      description: 'Enables the padding over this section.'
+      placeholder: 'Select...'
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled

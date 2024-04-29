@@ -1,0 +1,8 @@
+enabled: "1"
+url: "https://othercode.io/"
+image: "gantry-media://branding/logo.png"
+link: "1"
+svg: ""
+text: otherCode
+class: "g-logo g-logo-othercode"
+

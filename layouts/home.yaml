@@ -1,0 +1,104 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1499037807
+layout:
+  /header/: {  }
+  navigation: {  }
+  /subnavigation/: {  }
+  /intro/: {  }
+  /showcase/: {  }
+  /features/: {  }
+  /utility/: {  }
+  /above/: {  }
+  /main/: {  }
+  /below/: {  }
+  /banner/: {  }
+  /slide/: {  }
+  /bottom/: {  }
+  /testimonials/: {  }
+  /footer/: {  }
+  /maps/: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: ''
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  subnavigation:
+    type: section
+    attributes:
+      boxed: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  below:
+    type: section
+    attributes:
+      boxed: ''
+  banner:
+    type: section
+    attributes:
+      boxed: ''
+  slide:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  testimonials:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  maps:
+    type: section
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children

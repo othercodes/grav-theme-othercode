@@ -1,0 +1,128 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="terminal" style="min-height: {{ particle.terminal.height }};">
+        <div class="terminal-wrapper" id="{{ id }}-terminal-wrapper"
+             style="background-color: {{ particle.background.color }};min-height: {{ particle.terminal.height }};">
+            <div class="terminal-toolbar" id="{{ id }}-terminal-toolbar">
+                <div class="terminal-btn btn-close" id="{{ id }}-btn-close" title="Close"></div>
+                <div class="terminal-btn btn-minimize" id="{{ id }}-btn-minimize" title="Minimize"></div>
+                <div class="terminal-btn btn-maximize" id="{{ id }}-btn-maximize" title="Maximize"></div>
+                {{ particle.terminal.title }}
+            </div>
+            <div class="terminal-screen" id="{{ id }}-terminal-screen" style="color: {{ particle.font.color }};">
+
+                {% for item in particle.items %}
+                    <div class="term-section" id="term-{{ item.command }}">
+                        <div>{{ item.output|raw }}</div>
+                        <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
+                    </div>
+                {% endfor %}
+
+                <div class="term-section" id="term-rm-rf_">
+                    <div>rm: cannot remove '/projects/cosmic-ac/core.c'</div>
+                    <div>rm: cannot remove '/projects/cosmic-ac/ml.py'</div>
+                    <div>rm: cannot remove '/projects/cosmic-ac/bluenprints.dwg'</div>
+                    <div>rm: cannot remove '/projects/deep-thought/core.c'</div>
+                    <div>rm: cannot remove '/projects/deep-thought/wait.c'</div>
+                    <div>rm: cannot remove '/projects/deep-thought/voice.ogg'</div>
+                    <div>rm: cannot remove '/projects/flux-capacitor/blueprint.dwg'</div>
+                    <div>rm: cannot remove '/projects/jarvis/core.c'</div>
+                    <div>rm: cannot remove '/projects/jarvis/ultron-directives.c'</div>
+                    <div>rm: cannot remove '/projects/jarvis/voice.wav'</div>
+                    <div>rm: cannot remove '/projects/stargate/blueprint.dwg'</div>
+                    <p>Seriously dude?</p>
+                    <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
+                </div>
+
+                <div class="term-section" id="term-error">
+                    <div>Command not found!</div>
+                    <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
+                </div>
+
+                <div class="term-section" id="term-help">
+                    <div>&raquo; Help?</div>
+                    <p class="help"><span>Available commands:</span></p>
+                    <ul>
+                        {% for item in particle.items %}
+                            <li>'{{ item.command }}': {{ item.description }}</li>
+                        {% endfor %}
+                        <li>'help': displays this list</li>
+                    </ul>
+                    <p class="help"><span>Type [command] + <kbd>Enter</kbd></span></p>
+                </div>
+
+                <span class="command">
+                    <span class="hostname">
+                        {{ particle.terminal.hostname }}@{{ particle.terminal.user }}</span>
+                    :<span class="pwd">~</span>$
+                    <input type="text" id="terminal-input"
+                           style="background-color: {{ particle.background.color }};color: {{ particle.font.color }};"
+                    />
+                </span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript_footer %}
+    {% if particle.enabled %}
+        {{ parent() }}
+        <script type="text/javascript">
+
+            jQuery(document).ready(function () {
+
+                let sectionArray = [];
+                jQuery('.term-section').each(function (i, e) {
+                    sectionArray.push(jQuery(e).attr('id'));
+                });
+
+                let terminalInput = jQuery('#terminal-input');
+                let errorCommandLayout = jQuery('#term-error');
+                let commandLayout = jQuery('.command');
+                let homeCommandLayout = jQuery('#' + sectionArray[0]);
+
+                {% if particle.toolbal.functionality %}
+                jQuery('#{{ id }}-btn-close').click(function () {
+                    jQuery('#{{ id }}-terminal-wrapper').hide();
+                });
+                jQuery('#{{ id }}-btn-minimize').click(function () {
+                    jQuery('#{{ id }}-terminal-wrapper').addClass('minimized');
+                });
+                jQuery('#{{ id }}-btn-maximize').click(function () {
+                    jQuery('#{{ id }}-terminal-wrapper').removeClass('minimized');
+                });
+                {% endif %}
+
+                commandLayout.hide();
+                terminalInput.focus();
+
+                homeCommandLayout.addClass('open');
+                commandLayout.fadeIn();
+                terminalInput.focus();
+                terminalInput.val('');
+
+                terminalInput.keyup(function (e) {
+                    if (e.which === 13) {
+
+                        commandLayout.hide();
+                        let destination = terminalInput.val()
+                            .replace('/', '_')
+                            .replace(/ /g, '');
+
+                        jQuery('div[id="term-' + destination + '"]')
+                            .addClass('open').siblings().removeClass('open');
+                        if (jQuery.inArray('term-' + destination, sectionArray) === -1) {
+                            errorCommandLayout.addClass('open');
+                            errorCommandLayout.siblings().removeClass('open');
+                        }
+
+                        commandLayout.fadeIn();
+                        terminalInput.focus();
+                        terminalInput.val('');
+                    }
+                });
+            });
+        </script>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+div[id^="terminal-"] {
+  &.g-content {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.terminal {
+  font: 1em 'Inconsolata', monospace;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  padding-top: 10px;
+  width: 90%;
+  margin: 5em auto 0 auto;
+
+  .terminal-wrapper {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    width: 100%;
+    top: 10px;
+
+    &.minimized {
+      transform: translate(0%, -30px);
+      top: 100%;
+
+      .terminal-screen {
+        display: none;
+      }
+    }
+
+    .terminal-toolbar {
+      background: $navigation-background;
+      color: $navigation-text-color;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 10px 0 5px 15px;
+
+      .terminal-btn {
+        width: 13px;
+        height: 13px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        display: inline-block;
+        cursor: pointer;
+
+        &.btn-close {
+          background: $error-color;
+        }
+        &.btn-minimize {
+          background: $warning-color;
+        }
+        &.btn-maximize {
+          background: $success-color;
+        }
+      }
+    }
+
+    .terminal-screen {
+      padding: 1em;
+
+      ::selection {
+        background: #eee
+      }
+
+      ::-moz-selection {
+        background: #eee
+      }
+
+      .term-section {
+        display: none;
+      }
+
+      .open {
+        display: block;
+      }
+
+      .command {
+        display: block;
+        color: $white;
+        font-weight: 700;
+
+        .hostname {
+          color: $accent-color-1;
+        }
+
+        .pwd {
+          color: $success-color;
+        }
+      }
+
+      a {
+        color: $accent-color-1 !important;
+
+        &:hover,
+        &:focus {
+          color: $accent-color-2 !important;
+        }
+      }
+
+      h3 {
+        font-size: 1.2em;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0;
+
+        &.help {
+          line-height: 2em;
+        }
+      }
+
+      abbr {
+        cursor: help;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      li {
+        margin: .5em 0 0;
+      }
+
+      span {
+        color: #999;
+      }
+
+      kbd {
+        font-family: 'Inconsolata', monospace;
+        border: 1px solid #999;
+        text-transform: uppercase;
+        padding: 0 .2em;
+      }
+
+      pre {
+        background-color: transparent;
+        border: none;
+        overflow: hidden;
+        @media all and (max-width: $breakpoints-large-mobile-container) {
+          display: none;
+        }
+      }
+
+      input[type="text"] {
+        max-width: 80%;
+        border: none;
+        font-family: inherit;
+        padding: 0 .5em;
+        margin: 0;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+
+        &:hover {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+    }
+
+    transition: top .5s 0s cubic-bezier(.1, 1.2, .3, 1), transform .5s 0s cubic-bezier(.1, 1.2, .3, 1);
+  }
+
+}
+
+

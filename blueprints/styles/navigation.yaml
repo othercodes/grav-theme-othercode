@@ -1,0 +1,24 @@
+name: Navigation Styles
+description: Navigation section styles for the otherCode theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#3b3b3b"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"
+    dynamic-layout:
+      type: select.select
+      label: Dynamic Layout
+      description: 'Enables the hide on scroll feature.'
+      placeholder: 'Select...'
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled

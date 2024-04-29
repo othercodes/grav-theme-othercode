@@ -1,0 +1,27 @@
+enabled: '1'
+css:
+  class: ''
+title: ''
+target: _blank
+display: both
+items:
+  -
+    icon: 'fa fa-twitter fa-fw fa-2x'
+    text: ''
+    link: 'https://twitter.com/othercode'
+    name: Twitter
+  -
+    icon: 'fa fa-github fa-fw fa-2x'
+    text: ''
+    link: 'https://github.com/othercodes'
+    name: GitHub
+  -
+    icon: 'fa fa-google-plus fa-fw fa-2x'
+    text: ''
+    link: 'https://plus.google.com/+DavidUnaySantistebanDev'
+    name: Google+
+  -
+    icon: 'fa fa-linkedin-square fa-fw fa-2x'
+    text: ''
+    link: 'https://www.linkedin.com/in/david-unay-santisteban/'
+    name: LinkedIn

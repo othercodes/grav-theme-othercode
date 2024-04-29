@@ -1,0 +1,100 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1499037807
+layout:
+  /header/: {  }
+  /navigation/:
+    -
+      - loader-6877
+    -
+      - 'logo-9608 25'
+      - 'menu-6409 50'
+      - 'social-3171 25'
+  /subnavigation/: {  }
+  /intro/: {  }
+  /showcase/: {  }
+  /features/: {  }
+  /utility/: {  }
+  /above/: {  }
+  /main/:
+    -
+      - system-content-3742
+  /below/: {  }
+  /bottom/: {  }
+  /footer/: {  }
+  /copyright/:
+    -
+      - 'copyright-1736 25'
+      - 'spacer-spacer-7305 50'
+      - 'totop-8670 25'
+  /offcanvas/:
+    -
+      - mobile-menu-5697
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: ''
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  subnavigation:
+    type: section
+    attributes:
+      boxed: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  below:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+  offcanvas:
+    attributes:
+      boxed: ''
+content:
+  loader-6877:
+    block:
+      variations: 'nomarginall nopaddingall'
+  logo-9608:
+    title: 'Logo / Image'
+  social-3171:
+    block:
+      class: g-social-header
+  totop-8670:
+    title: 'To Top'

@@ -1,0 +1,84 @@
+#g-showcase {
+  background: $showcase-background;
+  color: $showcase-text-color;
+  padding: $section-padding 0;
+  position: relative;
+  z-index: 10;
+
+  @if $showcase-background-image {
+    background: url($showcase-background-image) no-repeat center center;
+    &.full-screen {
+      height: 100vh;
+    }
+
+    @if $showcase-background-parallax == "enabled" {
+      background-attachment: fixed;
+      background-position: 0 0;
+    }
+
+    background-size: cover;
+
+    @if $showcase-background-overlay == "enabled" {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: transparentize($showcase-background, 0.5);
+      }
+    }
+  }
+
+  a {
+    color: fade-out($showcase-text-color, 0.4);
+
+    &:hover {
+      color: fade-out($showcase-text-color, 0.2);
+    }
+  }
+
+  h2 {
+    font-weight: 300;
+    line-height: $core-line-height;
+
+    @include breakpoint(large-mobile-range) {
+      font-size: 1.35rem;
+    }
+
+    em {
+      font-weight: $font-weight-medium;
+    }
+
+    &.large-heading {
+      font-size: $h2-font-size * 2;
+
+      @include breakpoint(tablet-range) {
+        font-size: $h2-font-size * 1.25;
+      }
+
+      @include breakpoint(mobile-only) {
+        font-size: $h2-font-size;
+      }
+    }
+  }
+
+  .fp-showcase {
+    .g-title {
+      color: $base-background;
+
+      .title-tag {
+        color: $base-background;
+      }
+    }
+  }
+}
+
+@media print {
+  #g-header {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}

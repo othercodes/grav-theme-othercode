@@ -1,0 +1,87 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: _error
+  timestamp: 1499036326
+layout:
+  /header/: {  }
+  navigation: {  }
+  /subnavigation/: {  }
+  /intro/: {  }
+  /showcase/:
+    -
+      - custom-8642
+  /features/: {  }
+  /container-main/:
+    -
+      -
+        'mainbar 75':
+          -
+            - system-content-1587
+      -
+        'sidebar 25': {  }
+  /footer/: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: ''
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  subnavigation:
+    type: section
+    attributes:
+      boxed: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+  mainbar:
+    type: section
+    subtype: main
+    attributes:
+      class: ''
+    block:
+      variations: center
+  sidebar:
+    type: section
+    subtype: aside
+  container-main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-8642:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"g-title\">We are sorry!</h2>\n<p>Gantry 5 provides a custom error page for you to configure with either positions, particles or a combination of both, as well as styling.</p>"

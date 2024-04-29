@@ -1,0 +1,24 @@
+name: Copyright Styles
+description: Copyright section styles for the otherCode theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#3b3b3b"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"
+    padding:
+      type: select.select
+      label: Padding
+      description: 'Enables the padding over this section.'
+      placeholder: 'Select...'
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled

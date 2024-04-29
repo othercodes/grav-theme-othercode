@@ -1,0 +1,21 @@
+name: otherCode
+version: "1.0.0"
+description: "otherCode Gantry 5 theme."
+icon: gantry
+author:
+  name: Unay Santisteban
+  email: usantisteban@othercode.io
+  url: https://othercode.io
+homepage: https://othercode.io
+readme: "https://github.com/gantry/gantry5/blob/master/README.md"
+keywords: gantry, gantry5, theme
+bugs: "https://github.com/gantry/gantry5/issues"
+license: MIT
+
+dependencies:
+  - { name: grav, version: ">=1.7" }
+  - { name: gantry5, version: ">=5.5" }
+
+form:
+  validation: loose
+  fields:
