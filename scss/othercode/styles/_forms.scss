@@ -52,3 +52,9 @@ fieldset.input {
 #{$all-text-inputs-focus} {
   border-color: $border-color-focus;
 }
+
+form {
+  .form-field {
+    margin-bottom: 1rem;
+  }
+}

@@ -3,6 +3,13 @@
   color: $main-text-color;
   padding: $section-padding 0;
 
+  .e-content {
+    img {
+      display: block;
+      margin: 40px auto;
+    }
+  }
+
   @include breakpoint(mobile-only) {
     padding: 0;
   }

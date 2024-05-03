@@ -1,0 +1,9 @@
+#breadcrumbs {
+  span[itemtype^="http://schema.org/ListItem"] {
+    padding-right: 10px;
+
+    a[itemtype="http://schema.org/Thing"] {
+      padding-right: 10px;
+    }
+  }
+}

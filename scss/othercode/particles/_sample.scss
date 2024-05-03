@@ -3,14 +3,19 @@
     img {
       max-height: 100px;
     }
+
     h4 {
       color: $accent-color-1;
       text-transform: uppercase;
       font-size: 2em;
       font-weight: bold;
     }
+
     .sample-description {
-      margin: 0 0 3rem 0;
+    }
+
+    .sample-button {
+      margin: 3rem 0 0 0;
     }
   }
 }

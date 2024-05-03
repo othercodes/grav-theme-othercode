@@ -23,3 +23,14 @@ pre[class*="language-"] {
   border: none;
   border-radius: 0;
 }
+
+.search-input {
+  color: $base-text-color;
+}
+
+ul.related-pages {
+  margin: 10px 0 10px 10px;
+  li {
+    border-bottom: none;
+  }
+}
