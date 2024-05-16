@@ -20,7 +20,7 @@
 
 {% block javascript_footer %}
     {{ parent() }}
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js{% if particle.apikey %}?key={{ particle.apikey|e|trim }}{% endif %}"></script>
+    <script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js{% if particle.apikey %}?key={{ particle.apikey|e|trim }}{% endif %}"></script>
     <script type="text/javascript">
         function initialize{{ indentifier|e }}() {
 

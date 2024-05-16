@@ -20,7 +20,7 @@
                         <div class="wrapper">
 
                             {% if particle.image %}
-                                <img src="{{ url(particle.image) }}" alt="{{ particle.headline|e }}"/>
+                                <img fetchpriority="high" src="{{ url(particle.image) }}" alt="{{ particle.headline|e }}"/>
                             {% endif %}
 
                             <h3 {% if not particle.link %}class="button-action"{% endif %}>

@@ -2,6 +2,7 @@
 
 {% block particle %}
     <div class="animated-branding {% if particle.filter.enable %} filter{% endif %}">
+        <img src="{{ gantry.config.get('styles.showcase.background-image') }}" style="display:none;">
         <div class="intro">
             {% if particle.title %}
                 <h1 class="wow fadeInUp" data-wow-delay=".4s">{{ particle.title|raw }}</h1>
@@ -16,7 +17,7 @@
             {% endif %}
 
         </div>
-        <a href="{{ url(particle.scroll.to) }}">
+        <a href="{{ url(particle.scroll.to) }}" aria-label="{{ particle.aria.label|raw }}">
             <div class="mouse-icon">
                 <div id="wheel" class="wheel"></div>
             </div>

@@ -40,7 +40,7 @@
 
 {% block javascript_footer %}
 {% do gantry.load('jquery') %} 
-<script src='//connect.soundcloud.com/sdk.js'></script>
-<script src="{{ url('gantry-theme://js/audioplayer.js') }}"></script>
-<script src="{{ url('gantry-theme://js/audioplayer.init.js') }}"></script>
+<script async src='//connect.soundcloud.com/sdk.js'></script>
+<script async src="{{ url('gantry-theme://js/audioplayer.js') }}"></script>
+<script async src="{{ url('gantry-theme://js/audioplayer.init.js') }}"></script>
 {% endblock %}

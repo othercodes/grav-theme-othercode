@@ -104,13 +104,17 @@
                             <div class="g-block size-100 wow fadeInUp download-button">
 
                                 {% if particle.contact.link %}
-                                    <a class="button button-primary" href="{{ url(particle.contact.link) }}">
+                                    <a class="button button-primary"
+                                       href="{{ url(particle.contact.link) }}"
+                                       aria-label="{{ "TPL_OTHERCODE_PARTICLE_ABOUTME_CONTACT_LINK"|t|e }}">
                                         <i class="fa fa-paper-plane"></i> {{ "TPL_OTHERCODE_PARTICLE_ABOUTME_CONTACT_LINK"|t|e }}
                                     </a>
                                 {% endif %}
 
                                 {% if particle.cv.link %}
-                                    <a class="button button-secondary" href="{{ url(particle.cv.link) }}"
+                                    <a class="button button-secondary"
+                                       href="{{ url(particle.cv.link) }}"
+                                       aria-label="{{ "TPL_OTHERCODE_PARTICLE_ABOUTME_MY_CV_LINK"|t|e }}"
                                        target="_blank">
                                         <i class="fa fa-download"></i> {{ "TPL_OTHERCODE_PARTICLE_ABOUTME_MY_CV_LINK"|t|e }}
                                     </a>

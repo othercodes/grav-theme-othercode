@@ -1,6 +1,8 @@
 .g-home {
   &.g-othercode-style {
-    h2 {
+    h2.g-title {
+      font-size: $h1-font-size;
+      font-weight: $font-weight-bold;
       &::before {
         content: "// ";
       }
@@ -177,7 +179,16 @@
   }
 }
 
-.error {
+.g-blog {
+  .list-blog-header {
+    img {
+      width: 754px;
+      height: 251px;
+    }
+  }
+}
+
+.g-error {
   #g-showcase {
     padding: 0;
   }

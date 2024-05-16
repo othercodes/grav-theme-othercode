@@ -31,6 +31,12 @@ form:
       description: Scroll to this DOM element.
       default: '#wheel'
 
+    aria.label:
+      type: input.text
+      label: Aria Label
+      description: Accessibility link name.
+      default: 'Know More!'
+
     filter.enable:
       type: input.checkbox
       label: Accent Filter

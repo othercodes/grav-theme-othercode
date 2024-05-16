@@ -12,7 +12,7 @@
 
 {% block javascript_footer %}
     {% do gantry.load('jquery') %}
-    <script src="{{ url('gantry-theme://js/jquery.easypiechart.js') }}"></script>
+    <script async src="{{ url('gantry-theme://js/jquery.easypiechart.js') }}"></script>
     <script type="text/javascript">
         jQuery('#item-{{ id }}').bind('inview', function (event, visible, visiblePartX, visiblePartY) {
             if (visible) {

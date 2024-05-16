@@ -1,9 +1,11 @@
 .about-me {
   .short-info {
     margin-bottom: 40px;
+
     h3 {
       margin-bottom: 30px;
     }
+
     ul {
       margin-top: 10px;
       display: inline-block;
@@ -19,6 +21,7 @@
 
   .download-button {
     margin-top: 1em;
+
     a {
       margin-right: 20px;
       color: #fff;
@@ -48,6 +51,11 @@
 
     .my-photo {
       padding: 0 20px;
+
+      img {
+        width: 313px;
+        height: 313px;
+      }
     }
   }
 

@@ -3,17 +3,17 @@
 {% block javascript_footer %}
     {% if particle.enabled %}
         {{ parent() }}
-        <script type="text/javascript">
+        <script async type="text/javascript">
             jQuery(document).ready(function () {
 
                 jQuery('a[href^="#"]').on('click', function (e) {
                     e.preventDefault();
 
-                    var target = this.hash;
-                    var ID = jQuery(this).attr("id");
+                    const target = this.hash;
+                    const ID = jQuery(this).attr("id");
 
                     if (ID !== "g-totop") {
-                        var $target = jQuery(target);
+                        const $target = jQuery(target);
                         jQuery('html, body').stop().animate({'scrollTop': $target.offset().top}, 600, 'swing', function () {
                             window.location.hash = target;
                         });

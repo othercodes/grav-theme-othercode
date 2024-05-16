@@ -19,7 +19,10 @@
                     {% endif %}
                     {% if particle.linktext %}
                         <div class="sample-button">
-                            <a href="{{ particle.link|e }}" class="button">{{ particle.linktext|e }}
+                            <a href="{{ particle.link|e }}"
+                               aria-label="{{ particle.linktext|e }}"
+                               class="button">
+                                {{ particle.linktext|e }}
                             </a>
                         </div>
                     {% endif %}
