@@ -60,7 +60,7 @@
       }
     }
 
-    // Features
+    // Features Section
     .fp-features {
       .g-block {
         @include breakpoint(mobile-only) {
@@ -110,7 +110,7 @@
       }
     }
 
-    // Testimonials
+    // Testimonials Section
     .fp-testimonials {
       blockquote {
         margin: 2.5rem 0;
@@ -138,7 +138,7 @@
       }
     }
 
-    // Multi Column Text
+    // Multi Column Text Section
     .fp-multi-column-text {
       .g-block {
         p {
@@ -174,5 +174,11 @@
         }
       }
     }
+  }
+}
+
+.error {
+  #g-showcase {
+    padding: 0;
   }
 }

@@ -6,10 +6,10 @@ author:
   name: Unay Santisteban
   email: usantisteban@othercode.io
   url: https://othercode.io
-homepage: https://othercode.io
-readme: "https://github.com/gantry/gantry5/blob/master/README.md"
+homepage: https://github.com/othercodes/grav-theme-othercode
+readme: https://github.com/othercodes/grav-theme-othercode/blob/master/README.md
 keywords: gantry, gantry5, theme
-bugs: "https://github.com/gantry/gantry5/issues"
+bugs: https://github.com/othercodes/grav-theme-othercode/issues
 license: MIT
 
 dependencies:

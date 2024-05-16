@@ -2,23 +2,23 @@ details:
   name: otherCode
   version: 1.0.0
   icon: paper-plane
-  date: 2024-04-26
+  date: 2024-05-16
   author:
     name: otherCode
-    email: usantisteban@othercode.es
-    link: http://www.othercode.es
+    email: usantisteban@othercode.io
+    link: https://github.com/othercodes/grav-theme-othercode
 
   documentation:
-    link: http://docs.gantry.org/gantry5
+    link: https://github.com/othercodes/grav-theme-othercode
 
   support:
-    link: https://gitter.im/gantry/gantry5
+    link: https://github.com/othercodes/grav-theme-othercode
 
   updates:
-    link: http://updates.othercode.es/themes/othercode.yaml
+    link: http://updates.othercode.io/themes/othercode.yaml
 
-  copyright: (C) 2007 - 2016 otherCode. All rights reserved.
-  license: GPLv2
+  copyright: (C) 2007 - 2024 otherCode. All rights reserved.
+  license: Apache-2.0
   description: otherCode Theme
   images:
     thumbnail: admin/images/preset1.png
@@ -30,7 +30,7 @@ configuration:
     engine: nucleus
 
   theme:
-    parent: g5_othercode
+    parent: othercode
     base: gantry-theme://common
     file: gantry-theme://includes/theme.php
     class: \Gantry\Framework\Theme

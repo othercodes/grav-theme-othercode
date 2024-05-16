@@ -13,7 +13,7 @@
                             {% if particle.photo %}
                                 <div class="wow fadeInUp my-photo">
                                     <img src="{{ url(particle.photo) }}"
-                                         alt="{{ 'TPL_G5_OTHERCODE_PARTICLE_ABOUTME_NAME'|t|e }} Photo"
+                                         alt="{{ 'TPL_OTHERCODE_PARTICLE_ABOUTME_NAME'|t|e }} Photo"
                                     >
                                 </div>
                             {% endif %}
@@ -22,7 +22,7 @@
                                     {% if particle.name %}
                                         <li>
                                             <strong>
-                                                {{ 'TPL_G5_OTHERCODE_PARTICLE_ABOUTME_NAME'|t|e }}:
+                                                {{ 'TPL_OTHERCODE_PARTICLE_ABOUTME_NAME'|t|e }}:
                                             </strong>
                                             {{ particle.name }}
                                         </li>
@@ -31,7 +31,7 @@
                                     {% if particle.birth %}
                                         <li>
                                             <strong>
-                                                {{ 'TPL_G5_OTHERCODE_PARTICLE_ABOUTME_BIRTH'|t|e }}:
+                                                {{ 'TPL_OTHERCODE_PARTICLE_ABOUTME_BIRTH'|t|e }}:
                                             </strong>
                                             {{ particle.birth }}
                                         </li>
@@ -40,7 +40,7 @@
                                     {% if particle.phone %}
                                         <li>
                                             <strong>
-                                                {{ 'TPL_G5_OTHERCODE_PARTICLE_ABOUTME_PHONE'|t|e }}:
+                                                {{ 'TPL_OTHERCODE_PARTICLE_ABOUTME_PHONE'|t|e }}:
                                             </strong>
                                             <a href="tel:{{ particle.phone }}">{{ particle.phone }}</a>
                                         </li>
@@ -49,7 +49,7 @@
                                     {% if particle.email %}
                                         <li>
                                             <strong>
-                                                {{ 'TPL_G5_OTHERCODE_PARTICLE_ABOUTME_EMAIL'|t|e }}:
+                                                {{ 'TPL_OTHERCODE_PARTICLE_ABOUTME_EMAIL'|t|e }}:
                                             </strong>
                                             <a href="mailto:{{ particle.email }}">{{ particle.email }}</a>
                                         </li>
@@ -58,7 +58,7 @@
                                     {% if particle.address %}
                                         <li>
                                             <strong>
-                                                {{ 'TPL_G5_OTHERCODE_PARTICLE_ABOUTME_ADDRESS'|t|e }}:
+                                                {{ 'TPL_OTHERCODE_PARTICLE_ABOUTME_ADDRESS'|t|e }}:
                                             </strong>
                                             {{ particle.address|raw }}
                                         </li>
@@ -105,14 +105,14 @@
 
                                 {% if particle.contact.link %}
                                     <a class="button button-primary" href="{{ url(particle.contact.link) }}">
-                                        <i class="fa fa-paper-plane"></i> {{ "TPL_G5_OTHERCODE_PARTICLE_ABOUTME_CONTACT_LINK"|t|e }}
+                                        <i class="fa fa-paper-plane"></i> {{ "TPL_OTHERCODE_PARTICLE_ABOUTME_CONTACT_LINK"|t|e }}
                                     </a>
                                 {% endif %}
 
                                 {% if particle.cv.link %}
                                     <a class="button button-secondary" href="{{ url(particle.cv.link) }}"
                                        target="_blank">
-                                        <i class="fa fa-download"></i> {{ "TPL_G5_OTHERCODE_PARTICLE_ABOUTME_MY_CV_LINK"|t|e }}
+                                        <i class="fa fa-download"></i> {{ "TPL_OTHERCODE_PARTICLE_ABOUTME_MY_CV_LINK"|t|e }}
                                     </a>
                                 {% endif %}
                             </div>

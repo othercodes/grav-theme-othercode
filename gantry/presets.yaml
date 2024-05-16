@@ -31,12 +31,12 @@ preset1:
       text-color: '#ffffff'
     showcase:
       background: '#6886a3'
-      background-image: 'gantry-media://showcase/showcase-001.jpg'
+      background-image: 'gantry-media://showcase/showcase-main.webp'
       background-overlay: enabled
       text-color: '#ffffff'
     intro:
       background: '#ffffff'
-      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-image: ''
       background-overlay: enabled
       text-color: '#444444'
     features:

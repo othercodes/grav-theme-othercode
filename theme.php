@@ -1,14 +1,5 @@
 <?php
 
-/**
- * @package   Gantry5
- * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2022 RocketTheme, LLC
- * @license   MIT
- *
- * http://opensource.org/licenses/MIT
- */
-
 namespace Grav\Theme;
 
 use Gantry\Framework\Gantry;
@@ -17,10 +8,11 @@ use Grav\Common\Theme;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
 
 /**
- * Class G5_Helium
+ * Class OtherCode
+ *
  * @package Grav\Theme
  */
-class G5_OtherCode extends Theme
+class OtherCode extends Theme
 {
     /** @var string */
     public $gantry = '5.5';
@@ -73,7 +65,7 @@ class G5_OtherCode extends Theme
 
         // Define Gantry services.
         $gantry['theme'] = static function ($c) {
-            return new \Gantry\Theme\G5_OtherCode($c['theme.path'], $c['theme.name']);
+            return new \Gantry\Theme\OtherCode($c['theme.path'], $c['theme.name']);
         };
     }
 }

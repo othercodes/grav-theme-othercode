@@ -13,4 +13,4 @@ namespace Gantry\Theme;
 
 use Gantry\Framework\Theme;
 
-class G5_OtherCode extends Theme {}
+class OtherCode extends Theme {}
