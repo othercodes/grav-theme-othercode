@@ -6,4 +6,11 @@
       padding-right: 10px;
     }
   }
+
+  // overrides the grav nucleus styles.
+  // TODO: find proper way to override this.
+  // check: https://github.com/gantry/gantry5/blob/develop/engines/grav/nucleus/scss/grav/theme/_blog.scss#L145C1-L150C2
+  @include breakpoint(mobile-only) {
+    display: block !important;
+  }
 }
