@@ -3,6 +3,7 @@
     h2.g-title {
       font-size: $h1-font-size;
       font-weight: $font-weight-bold;
+
       &::before {
         content: "// ";
       }
@@ -185,6 +186,12 @@
       width: 754px;
       max-height: 251px;
     }
+  }
+
+  span.tags > a {
+    padding: 3px 5px;
+    border: 1px solid;
+    margin: 0 3px;
   }
 }
 
